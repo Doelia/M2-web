@@ -2,6 +2,6 @@
 
 $dbDriver = 'mysql';
 $dbHost = 'localhost';
-$dbName = 'chuck';
+$dbName = 'test';
 $dbUser = 'root';
-$dbPwd = '';
+$dbPwd = 'wugaxu';

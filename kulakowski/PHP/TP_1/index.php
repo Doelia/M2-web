@@ -11,9 +11,13 @@ $title = 'TP n°1';
  * @return string
  */
 function accronym($string) {
-    // @TODO
-   
-    return 'TODO';
+    $out = '';
+    foreach (explode(' ', $string) as $value) {
+        if ($value) {
+            $out .= strtoupper($value[0]);
+        }
+    }
+    return $out;
 }
 
 
@@ -24,9 +28,16 @@ function accronym($string) {
  * @return string
  */
 function syracuse($int) {
-    // @TODO
-   
-    return 'TODO';
+    if (!is_numeric($int) || $int <= 0) {
+        return "Error, $int n'est pas un entier positif";
+    }
+    if ($int % 2) {
+        $int *= 3;
+        $int++;
+    } else {
+        $int /= 2;
+    }
+    return ($int == 1) ? 1 : $int.' '.syracuse($int);
 }
 
 
@@ -37,9 +48,14 @@ function syracuse($int) {
  * @return array Array of string
  */
 function getFacts($nb) {
-    // @TODO
-   
-    return array('TODO');
+    $facts = json_decode(file_get_contents('chuck.json'));
+    $list = array();
+    for ($i=0; $i < $nb; $i++) {
+        $iRan = rand(0, count($facts)-1);
+        $f = $facts[$iRan];
+        $list[] = $f->fact;
+    }
+    return $list;
 }
 
 ?>
@@ -56,7 +72,7 @@ function getFacts($nb) {
         <p>Créez une fonction qui prend en argument une string et qui retourne les initiales de chaque mot en majuscule.</p>
         <p><?= accronym('PHP: Hypertext Preprocessor') ?>
     </article>
-    
+
     <article>
         <h2>Exercice n°2: Conjecture de Syracuse</h2>
         <p> Créez une fonction qui prend comme argument n'importe quel nombre entier supérieur à zéro, si le nombre est pair divisez-le par 2, si le nombre est impair multipliez-le par 3 et ajoutez 1. Au final votre fonction doit retourner une série de nombre, le dernier de ces nombres doit être le chiffre 1.</p>
@@ -67,11 +83,11 @@ function getFacts($nb) {
             <li><b>51</b> <?= syracuse(51) ?></li>
         </ul>
     </article>
-    
+
     <article>
         <h2>Exercice n°3: Lecture de fichier</h2>
         <p>Ouvrir le ficher "chuck.json", et sortir aléatoirement 5 Chuck Norris facts.</p>
-        
+
         <ul>
         <?php foreach(getFacts(5) as $fact): ?>
             <li><?= $fact ?></li>

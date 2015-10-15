@@ -17,24 +17,26 @@ class FactManagement {
 
         // DB connection
         try {
-            // @TODO
+            $this->connection = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPwd);
         } catch(Exception $e) {
             var_dump($e);
         }
     }
- 
+
 
     /**
      * Import fact from JSON
      */
     public function import() {
-        	
+        $query = "INSERT INTO facts (fact, date, vote, points) VALUES";
         foreach (self::getFactsFromJSON() as $fact) {
-            // @TODO
+            $query .= "('".str_replace("'", "", $fact->fact)."', '".$fact->date."', '".$fact->vote."', '".$fact->points."'),";
         }
+        $query = rtrim($query, ",");
+        $this->connection->query($query);
     }
-    
-    
+
+
     /**
      * Get top of fact
      *
@@ -42,12 +44,15 @@ class FactManagement {
      * @return array Array of facts
      */
      public function getTop($limit = 10) {
-        // @TODO
-        
-        return array();
+        $list = array();
+        $query = "SELECT fact FROM facts ORDER BY vote DESC LIMIT $limit";
+        foreach ($this->connection->query($query) as $results) {
+           $list[] = $results["fact"];
+        }
+        return $list;
     }
 
-       
+
     /**
      * Get randum Chuck Norris fact from JSON file
      *
@@ -56,7 +61,7 @@ class FactManagement {
      */
     private static function getFactsFromJSON() {
         $file = dirname(__FILE__) . '/chuck.json';
-        
+
         return json_decode(file_get_contents($file));
     }
 
