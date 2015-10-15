@@ -24,6 +24,11 @@
 - Intervenant Guillaume Kulakowski
   - Blog : http://blog.kulakowski.fr/
   - Support de Cours : http://blog.kulakowski.fr/public/cours/
-  - [Base du web](http://blog.kulakowski.fr/public/cours/um2/2015-2016/1%20-%20Les%20bases%20du%20web/Les%20bases%20du%20Web.pdf)
-  - 35 commandements pour l'optimisation
+  - Cours de 3h sur les [Base du web](http://blog.kulakowski.fr/public/cours/um2/2015-2016/1%20-%20Les%20bases%20du%20web/Les%20bases%20du%20Web.pdf)
+  	- 35 commandements pour l'optimisation
   - [Petit TP facile sur jQuery](http://blog.kulakowski.fr/public/cours/um2/2015-2016/1%20-%20Les%20bases%20du%20web/TP%20n%c2%b01.tar.gz)
+
+### Séance du 15/10
+- Intervenant Guillaume Kulakowski (2ème fois)
+- Cours sur [PHP](http://blog.kulakowski.fr/public/cours/um2/2015-2016/2%20-%20Les%20bases%20de%20PHP/Les%20bases%20de%20PHP.pdf)
+
