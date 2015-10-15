@@ -28,9 +28,9 @@ class FactManagement {
      * Import fact from JSON
      */
     public function import() {
-        $query = "INSERT INTO facts (fact, date, vote, points) VALUES";
+        $query = "INSERT INTO facts (fact, date, vote, points) VALUES ";
         foreach (self::getFactsFromJSON() as $fact) {
-            $query .= "('".str_replace("'", "", $fact->fact)."', '".$fact->date."', '".$fact->vote."', '".$fact->points."'),";
+            $query .= "('".str_replace("'", "&#39;", $fact->fact)."', '".$fact->date."', '".$fact->vote."', '".$fact->points."'),";
         }
         $query = rtrim($query, ",");
         $this->connection->query($query);
