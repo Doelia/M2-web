@@ -31,4 +31,5 @@
 ### Séance du 15/10
 - Intervenant Guillaume Kulakowski (2ème fois)
 - Cours sur [PHP](http://blog.kulakowski.fr/public/cours/um2/2015-2016/2%20-%20Les%20bases%20de%20PHP/Les%20bases%20de%20PHP.pdf)
-
+    - Et un peu de git et outils de déploiment
+- TP sur PHP : Classes, PHP
