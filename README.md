@@ -31,5 +31,9 @@
 ### Séance du 15/10
 - Intervenant Guillaume Kulakowski (2ème fois)
 - Cours sur [PHP](http://blog.kulakowski.fr/public/cours/um2/2015-2016/2%20-%20Les%20bases%20de%20PHP/Les%20bases%20de%20PHP.pdf)
-    - Et un peu de git et outils de déploiment
+    - Et un peu de [git et outils de déploiment](http://blog.kulakowski.fr/public/cours/um2/2015-2016/3%20-%20D%C3%A9couverte%20de%20Symfony2/3.1%20-%20DevOps,%20Industrialisation%20&%20Symfony2.pdf)
 - TP sur PHP : Classes, PHP
+
+### Séance du 22/10
+- Intervenant Guillaume Kulakowski (3ème fois)
+- Cours ["À la découverte de Symphony"](http://blog.kulakowski.fr/public/cours/um2/2015-2016/3%20-%20D%C3%A9couverte%20de%20Symfony2/3.2%20-%20D%C3%A9couverte%20de%20Symfony2.pdf)
