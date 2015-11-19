@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>My Angular App</title>
+    <script src="../angular.min.js"></script>
+    <script src="../angular-route.min.js"></script>
+</head>
+<body>
+    <ng-view></ng-view>
+
+    <script type="text/javascript">
+        var app = angular.module('app', ['ngRoute']);
+
+        app.controller('controleur1', function($scope) {
+            $scope.yourName = "Jame Bond ?";
+        });
+
+        app.controller('controleur2', function($scope) {
+            $scope.yourName = "folks !";
+        });
+
+        app.config(['$routeProvider', function ($routeProvider) {
+            $routeProvider
+                .when('/nom', {
+                    controller: 'controleur1',
+                    templateUrl: 'TEMPLATES/hello.tpl'
+                })
+                .otherwise({
+                    controller: 'controleur2',
+                    templateUrl: 'TEMPLATES/helloGlobal.tpl'
+                });
+        }]);
+    </script>
+</body>
+</html>
