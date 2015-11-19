@@ -31,9 +31,30 @@
 ### Séance du 15/10
 - Intervenant Guillaume Kulakowski (2ème fois)
 - Cours sur [PHP](http://blog.kulakowski.fr/public/cours/um2/2015-2016/2%20-%20Les%20bases%20de%20PHP/Les%20bases%20de%20PHP.pdf)
-    - Et un peu de [git et outils de déploiment](http://blog.kulakowski.fr/public/cours/um2/2015-2016/3%20-%20D%C3%A9couverte%20de%20Symfony2/3.1%20-%20DevOps,%20Industrialisation%20&%20Symfony2.pdf)
+    - Et un peu de [git et outils de déploiment](http://blog.kulakowski.fr/public/cours/um2/2015-2016/3%20-%20D%C3%A9couverte%20de%20Symfony2/3.1%20-%20DevOps,%20Industrialisation%20&%20Symfony2.pdf) (Devops, industrialisation et Symphony)
 - TP sur PHP : Classes, PHP
 
 ### Séance du 22/10
 - Intervenant Guillaume Kulakowski (3ème fois)
 - Cours ["À la découverte de Symphony"](http://blog.kulakowski.fr/public/cours/um2/2015-2016/3%20-%20D%C3%A9couverte%20de%20Symfony2/3.2%20-%20D%C3%A9couverte%20de%20Symfony2.pdf)
+
+### Séance du 19/11
+- Intervenant M. Pompidor, première intervention
+- Cours
+    - Node
+        -
+    - Angular
+        - Un fichier angular.js à inclure pour avoir le framework
+        - Des controleurs, indépendants entre eux
+            - On peut leur donner des objets dans leur mémoire, "scop"
+            - Ils peuvent aussi puisser dans la mémoire "rootscop"
+        - Des templates (= vues)
+            - Stimulées par les controleurs via les scops
+    - Exemple 1
+        - Hello world
+    - Exemple 2
+        - Ajout d'un controller pour définir une valeur par défaut à un modèle attribut
+    - Exemple 3
+        - Ajout de route pour faire varier le contenu en fonction de l'URL
+    - Exemple 4 Appel des templates dans un dossier distant
+        - -> Ça fait une requête AJAX pour récupérer le template
