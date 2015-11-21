@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>My Angular App</title>
+    <script src="../angular.min.js"></script>
+    <script src="../angular-route.min.js"></script>
+</head>
+<body>
+    <b>Gestion d'un club</b><br/><br/>
+    <ng-view></ng-view>
+    <script>
+        var app = angular.module('app', ['ngRoute']);
+
+        // Cette fonction serait appelée au démarrage de l'application :
+        app.run(function($rootScope, $location, $routeParams) {
+
+        });
+
+        app.controller('controleurMembres', function ($scope, $http) {
+            console.log("Dans controleurMembres");
+            $http.get('http://localhost:8888/listeMembres').then(function(response) {
+                $scope.membres = response.data;
+                // Affichage de contrôle
+                for (var i=0; i < $scope.membres.length; i++) {
+                    console.log($scope.membres[i].nom+" "+$scope.membres[i].prenom);
+                }
+            });
+        });
+
+        app.controller('controleurMembresParLeNom', function ($scope, $http, $routeParams) {
+            console.log("Dans controleurMembresParLeNom");
+            $http.get('http://localhost:8888/listeMembres/'+$routeParams.nom).then(function(response) {
+                $scope.membres = response.data;
+            });
+        });
+
+        app.config(function ($routeProvider) {
+            $routeProvider
+            .when('/listeMembres', {
+                controller:'controleurMembres',
+                templateUrl:'TEMPLATES/listeMembres.tpl'
+            })
+            .when('/listeMembres/:nom', {
+                controller:'controleurMembresParLeNom',
+                templateUrl:'TEMPLATES/listeMembres.tpl'
+            })
+            .when('/', {
+                controller:'controleur',
+                templateUrl:'TEMPLATES/accueil.tpl'
+            });
+        });
+    </script>
+</body>
+</html>
