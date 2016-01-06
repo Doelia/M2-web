@@ -40,24 +40,27 @@
 
 ### Séance du 19/11
 - Intervenant M. Pompidor, première intervention
-- Cours
-    - Node
-        -
-    - Angular
+- Cours/TP
+    - Notes Angular
         - Un fichier angular.js à inclure pour avoir le framework
         - Des controleurs, indépendants entre eux
-            - On peut leur donner des objets dans leur mémoire, "scop"
-            - Ils peuvent aussi puisser dans la mémoire "rootscop"
+            - On peut leur donner des objets dans leur mémoire, "$scop"
+            - Ils peuvent aussi puisser dans la mémoire "$rootscop" (voir partie 2)
         - Des templates (= vues)
             - Stimulées par les controleurs via les scops
-    - Exemple 1
-        - Hello world
-    - Exemple 2
-        - Ajout d'un controller pour définir une valeur par défaut à un modèle attribut
-    - Exemple 3
-        - Ajout de route pour faire varier le contenu en fonction de l'URL
-    - Exemple 4 Appel des templates dans un dossier distant
-        - -> Ça fait une requête AJAX pour récupérer le template
+- Partie 1 : http://www.lirmm.fr/~pompidor/ENONCES_TPS/JAVASCRIPT_AJAX_JSON_JQUERY_D3_ANGULAR_NODE/Cours_ANGULAR_NODE.pdf
+  - Exemple 1
+      - Hello world
+  - Exemple 2
+      - Ajout d'un controller pour définir une valeur par défaut à un modèle attribut
+  - Exemple 3
+      - Ajout de route pour faire varier le contenu en fonction de l'URL
+  - Exemple 4 Appel des templates dans un dossier distant
+      - -> Ça fait une requête AJAX pour récupérer le template
+  - Exemple 5 Connexion avec nodejs
+    - Communication via AJAX
+- Partie 2 : http://www.lirmm.fr/~pompidor/ENONCES_TPS/JAVASCRIPT_AJAX_JSON_JQUERY_D3_ANGULAR_NODE/Cours_ANGULAR_NODE_2.pdf
+  - Pas faite sérieusement, a revoir pour le partiel
 
 ### Séance du 3/12
 
