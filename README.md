@@ -58,3 +58,33 @@
         - Ajout de route pour faire varier le contenu en fonction de l'URL
     - Exemple 4 Appel des templates dans un dossier distant
         - -> Ça fait une requête AJAX pour récupérer le template
+
+### Séance du 3/12
+
+- Annonce projet
+    - Sur deux séances, celle-ci incluse
+        - Soutenance après les partiels
+    - Soit tout seul, soit à deux
+    - Pas à rendre, pas de rapport mais à soutenir pendant 10 minutes
+    - Sur les interfaces responsives
+        - Travail sur l'ergonomie
+            - Afficher / masquer...
+        - Application de type dictionnaire (voir diko de jeuxdemots)
+            - On ne fait que la visualisation
+            - Le contenu s'adpate (horizontale, portrait)
+        - Récupérer des infos sur jeuxdemots et les afficher joliements, dynamiquement
+            - Doit remplir tout l'écran
+            - Une seule requête par pages
+            - Requête sur l'API http://www.jeuxdemots.org/rezo-xml.php
+            - Format XML, bien founis (des fois redondants mais pour que ça aille plus vite)
+            - Mise en cache ?
+            - Parsing à la main
+            - > = rafinement
+        - Technos
+            - CSS3 (flex ?), Javascript
+            - AJAX
+            - Boostrap autorisé
+            - Ce qu'on veut en fait
+    - Evaluation
+        - Comment on a fait
+        - Ce que ça fait -> samsung galaxy S2
